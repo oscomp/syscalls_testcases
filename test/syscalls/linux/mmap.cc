@@ -364,7 +364,7 @@ TEST_F(MMapTest, MapFixed) {
 }
 
 // 64-bit addresses work too
-#if defined(__x86_64__) || defined(__aarch64__)
+#if defined(__x86_64__) || defined(__aarch64__) || defined(__riscv)
 TEST_F(MMapTest, MapFixed64) {
   EXPECT_THAT(Map(0x300000000000, kPageSize, PROT_NONE,
                   MAP_PRIVATE | MAP_ANONYMOUS | MAP_FIXED, -1, 0),
@@ -578,6 +578,9 @@ const uint8_t machine_code[] = {
 const uint8_t machine_code[] = {
     0x40, 0x05, 0x80, 0x52,  // mov w0, #42
     0xc0, 0x03, 0x5f, 0xd6,  // ret
+};
+#elif defined(__riscv)
+const uint8_t machine_code[] = {
 };
 #endif
 

@@ -191,11 +191,10 @@ http_archive(
 
 http_archive(
     name = "com_google_benchmark",
-    sha256 = "3c6a165b6ecc948967a1ead710d4a181d7b0fbcaa183ef7ea84604994966221a",
-    strip_prefix = "benchmark-1.5.0",
+    sha256 = "dccbdab796baa1043f04982147e67bb6e118fe610da2c65f88912d73987e700c",
+    strip_prefix = "benchmark-1.5.2",
     urls = [
-        "https://mirror.bazel.build/github.com/google/benchmark/archive/v1.5.0.tar.gz",
-        "https://github.com/google/benchmark/archive/v1.5.0.tar.gz",
+        "https://github.com/google/benchmark/archive/v1.5.2.tar.gz",
     ],
 )
 

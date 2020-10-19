@@ -134,6 +134,14 @@ static const char* required_fields[] = {
     "processor",        "BogoMIPS",    "Features", "CPU implementer",
     "CPU architecture", "CPU variant", "CPU part", "CPU revision",
 };
+#elif __riscv
+static const char* required_fields[] = {
+    "processor",
+    "hart",
+    "isa",
+    "mmu",
+    "uarch",
+};
 #else
 #error "Unknown architecture"
 #endif

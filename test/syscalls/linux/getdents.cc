@@ -250,6 +250,8 @@ typedef ::testing::Types<struct linux_dirent, struct linux_dirent64>
 #elif __aarch64__
 // Test only getdents64 on arm64.
 typedef ::testing::Types<struct linux_dirent64> GetdentsTypes;
+#elif __riscv
+typedef ::testing::Types<struct linux_dirent64> GetdentsTypes;
 #endif
 TYPED_TEST_SUITE(GetdentsTest, GetdentsTypes);
 

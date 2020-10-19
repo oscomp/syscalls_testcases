@@ -208,6 +208,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "32bit_test",
     testonly = 1,
@@ -226,6 +227,7 @@ cc_binary(
         "//test/util:test_util",
     ],
 )
+'''
 
 cc_binary(
     name = "accept_bind_test",
@@ -616,6 +618,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "exceptions_test",
     testonly = 1,
@@ -633,6 +636,7 @@ cc_binary(
         "//test/util:test_util",
     ],
 )
+'''
 
 cc_binary(
     name = "getcpu_test",
@@ -676,6 +680,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "exec_binary_test",
     testonly = 1,
@@ -695,6 +700,7 @@ cc_binary(
         "//test/util:test_util",
     ],
 )
+'''
 
 cc_binary(
     name = "exec_test",
@@ -858,6 +864,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "fpsig_fork_test",
     testonly = 1,
@@ -871,6 +878,7 @@ cc_binary(
         "//test/util:thread_util",
     ],
 )
+'''
 
 cc_binary(
     name = "fpsig_nested_test",
@@ -1557,6 +1565,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "arch_prctl_test",
     testonly = 1,
@@ -1572,6 +1581,7 @@ cc_binary(
         "//test/util:test_util",
     ],
 )
+'''
 
 cc_binary(
     name = "prctl_test",
@@ -1792,6 +1802,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "ptrace_test",
     testonly = 1,
@@ -1810,6 +1821,7 @@ cc_binary(
         "//test/util:time_util",
     ],
 )
+'''
 
 cc_binary(
     name = "pwrite64_test",
@@ -1997,6 +2009,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "rseq_test",
     testonly = 1,
@@ -2013,6 +2026,7 @@ cc_binary(
         "//test/util:test_util",
     ],
 )
+'''
 
 cc_binary(
     name = "rtsignal_test",
@@ -2053,6 +2067,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "seccomp_test",
     testonly = 1,
@@ -2070,6 +2085,7 @@ cc_binary(
         "//test/util:thread_util",
     ],
 )
+'''
 
 cc_binary(
     name = "select_test",
@@ -2156,6 +2172,7 @@ cc_binary(
     ],
 )
 
+'''
 cc_binary(
     name = "sigaltstack_test",
     testonly = 1,
@@ -2196,6 +2213,7 @@ cc_binary(
         arm64 = ["//test/util:test_main"],
     ),
 )
+'''
 
 cc_binary(
     name = "signalfd_test",

@@ -34,6 +34,8 @@ namespace testing {
 constexpr int kOLargeFile = 00100000;
 #elif defined(__aarch64__)
 constexpr int kOLargeFile = 00400000;
+#elif defined(__riscv)
+constexpr int kOLargeFile = 00100000;
 #else
 #error "Unknown architecture"
 #endif

@@ -18,6 +18,7 @@
 #include <linux/elf.h>
 #include <sys/ptrace.h>
 #include <sys/user.h>
+#include <asm/ptrace.h>
 
 #include "gtest/gtest.h"
 #include "test/util/logging.h"
@@ -73,6 +74,8 @@ class SysretTest : public ::testing::Test {
     regs_.rip = newrip;
 #elif defined(__aarch64__)
     regs_.pc = newrip;
+#elif defined(__riscv)
+    regs_.pc = newrip;
 #else
 #error "Unknown architecture"
 #endif
@@ -84,6 +87,8 @@ class SysretTest : public ::testing::Test {
 #if defined(__x86_64__)
     regs_.rsp = newrsp;
 #elif defined(__aarch64__)
+    regs_.sp = newrsp;
+#elif defined(__riscv)
     regs_.sp = newrsp;
 #else
 #error "Unknown architecture"
@@ -130,6 +135,9 @@ TEST_F(SysretTest, BadRsp) {
   EXPECT_TRUE(WIFSIGNALED(status) && WTERMSIG(status) == SIGBUS)
       << "status = " << status;
 #elif defined(__aarch64__)
+  EXPECT_TRUE(WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV)
+      << "status = " << status;
+#elif defined(__riscv)
   EXPECT_TRUE(WIFSIGNALED(status) && WTERMSIG(status) == SIGSEGV)
       << "status = " << status;
 #else

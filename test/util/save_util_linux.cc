@@ -24,6 +24,8 @@
 #define SYS_TRIGGER_SAVE SYS_create_module
 #elif defined(__aarch64__)
 #define SYS_TRIGGER_SAVE SYS_finit_module
+#elif defined(__riscv)
+#define SYS_TRIGGER_SAVE SYS_finit_module
 #else
 #error "Unknown architecture"
 #endif
