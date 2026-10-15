@@ -21,6 +21,9 @@ To build a single test case:<br>
 To build all syscalls test cases:<br>
 `bazel build --config=riscv64_config //test/syscalls/linux/...`
 
+OR Just build:
+`bazel build -s --config=riscv64_config //test/syscalls/linux:access_test //test/syscalls/linux:write_test`
+
 **Run tests**
 
 Depend on library: libstdc++.so
